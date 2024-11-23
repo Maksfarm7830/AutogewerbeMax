@@ -1,0 +1,424 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.hero-section {
+    background-image: url('luxury-car.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    background-color: #444;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animacje */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    opacity: 0;
+    animation: slideIn 1.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Sekcja najlepszego modelu */
+.best-model {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.best-model .model-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.best-model img {
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.best-model .model-details {
+    max-width: 500px;
+}
+
+.best-model .btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.best-model .btn:hover {
+    background-color: #444;
+}
+
+/* Sekcja ciekawostek */
+.facts {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.facts-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.fact {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fact h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.fact p {
+    font-size: 1em;
+    color: #666;
+}
+/* Ogólne tło dla całej strony */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('background.jpg'); /* Główne tło dla wszystkich stron */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+}
+
+/* Nagłówki */
+.navbar {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Subtelne rozmycie tła w nagłówku */
+}
+
+/* Podstrona Modele */
+.models-section {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin: 20px;
+    backdrop-filter: blur(5px);
+}
+
+/* Podstrona O nas */
+.about-section {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.7)
+    );
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin: 20px;
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+/* Podstrona Kontakt */
+.contact-section {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+}
+/* Ogólne ustawienia */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+}
+
+/* Układ sekcji w wersji desktop */
+.models-section .model-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.best-model .model-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Media Queries dla ekranów mniejszych niż 768px */
+@media (max-width: 768px) {
+    /* Nagłówek */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* Sekcja główna */
+    .hero-section {
+        height: auto;
+        padding: 20px;
+    }
+    .hero-section .hero-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Sekcja najlepszego modelu */
+    .best-model .model-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    .best-model img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Podstrona Modele */
+    .models-section .model-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .models-section .model {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Sekcja ciekawostek */
+    .facts-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Formularz kontaktowy lub tekst */
+    .contact-section {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+/* Media Queries dla ekranów mniejszych niż 480px (telefony) */
+@media (max-width: 480px) {
+    /* Zmniejszenie wielkości tekstu */
+    h1, h2, h3 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1em;
+    }
+
+    /* Obrazy w hero-section */
+    .hero-section .hero-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Przyciski */
+    .btn {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+}
+/* Konfigurator sekcja */
+.configurator-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin: 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.configurator-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.configurator-section label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.configurator-section select,
+.configurator-section input[type="checkbox"] {
+    margin-bottom: 10px;
+}
+
+#summary {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    display: none; /* Początkowo ukryte */
+}
+
+#summary h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#summary p {
+    font-size: 1.1em;
+}
+/* Konfigurator kroki */
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+/* Nawigacja */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#final-preview {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Podstawowa responsywność */
+@media (max-width: 768px) {
+    .steps-container {
+        padding: 10px;
+    }
+}
+
+
