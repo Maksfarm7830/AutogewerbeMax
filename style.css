@@ -239,4 +239,109 @@ body {
     margin: 20px;
     text-align: center;
 }
+/* Ogólne ustawienia */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+}
+
+/* Układ sekcji w wersji desktop */
+.models-section .model-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.best-model .model-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Media Queries dla ekranów mniejszych niż 768px */
+@media (max-width: 768px) {
+    /* Nagłówek */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* Sekcja główna */
+    .hero-section {
+        height: auto;
+        padding: 20px;
+    }
+    .hero-section .hero-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Sekcja najlepszego modelu */
+    .best-model .model-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    .best-model img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Podstrona Modele */
+    .models-section .model-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .models-section .model {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Sekcja ciekawostek */
+    .facts-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Formularz kontaktowy lub tekst */
+    .contact-section {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+/* Media Queries dla ekranów mniejszych niż 480px (telefony) */
+@media (max-width: 480px) {
+    /* Zmniejszenie wielkości tekstu */
+    h1, h2, h3 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1em;
+    }
+
+    /* Obrazy w hero-section */
+    .hero-section .hero-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Przyciski */
+    .btn {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+}
 
