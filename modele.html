@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modele Samochodów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Pasek nawigacyjny -->
+    <div class="navbar">
+        <div class="brand-name">
+            <h1>AutogewerbeMax</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="modele.html" class="active">Modele</a></li>
+            <li><a href="o-nas.html">O Nas</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </div>
+
+    <!-- Sekcja Modele -->
+    <section id="models" class="models-section">
+        <h2>Nasze Modele</h2>
+        <div class="model-list">
+            <div class="model" data-name="Model X" data-desc="Nowoczesny SUV z elektrycznym napędem." data-img="model-x.jpg">
+                <img src="model-x.jpg" alt="Model X">
+                <h3>Model X</h3>
+            </div>
+            <div class="model" data-name="Model S" data-desc="Sportowy sedan klasy premium." data-img="model-s.jpg">
+                <img src="model-s.jpg" alt="Model S">
+                <h3>Model S</h3>
+            </div>
+            <div class="model" data-name="Model Y" data-desc="Kompaktowy crossover idealny dla rodziny." data-img="model-y.jpg">
+                <img src="model-y.jpg" alt="Model Y">
+                <h3>Model Y</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal z informacjami o modelu -->
+    <div id="modelModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="" alt="Model" />
+            <h3 id="modal-title"></h3>
+            <p id="modal-desc"></p>
+        </div>
+    </div>
+
+    <!-- Skrypt -->
+    <script>
+        const models = document.querySelectorAll('.model');
+        const modal = document.getElementById('modelModal');
+        const modalImg = document.getElementById('modal-img');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDesc = document.getElementById('modal-desc');
+        const closeModal = document.querySelector('.modal .close');
+
+        models.forEach(model => {
+            model.addEventListener('click', () => {
+                modalImg.src = model.dataset.img;
+                modalTitle.textContent = model.dataset.name;
+                modalDesc.textContent = model.dataset.desc;
+                modal.style.display = 'block';
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
